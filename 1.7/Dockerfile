@@ -1,7 +1,7 @@
 FROM ubuntu:trusty
 MAINTAINER Alexander Johnson <alex@cldfzn.com>
 
-ENV NGINX_VERSION 1.7.9-1+trusty2
+ENV NGINX_VERSION 1.7.12-1+trusty0
 
 RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys C300EE8C && \
     echo "deb http://ppa.launchpad.net/nginx/development/ubuntu trusty main" | tee -a /etc/apt/sources.list.d/nginx.list && \
