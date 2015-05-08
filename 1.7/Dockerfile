@@ -1,12 +1,10 @@
 FROM ubuntu:trusty
 MAINTAINER Alexander Johnson <alex@cldfzn.com>
 
-ENV NGINX_VERSION 1.7.12-1+trusty0
-
 RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys C300EE8C && \
     echo "deb http://ppa.launchpad.net/nginx/development/ubuntu trusty main" | tee -a /etc/apt/sources.list.d/nginx.list && \
     apt-get -qq update && \
-    apt-get -qqy install nginx=${NGINX_VERSION} && \
+    apt-get -qqy install nginx && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
